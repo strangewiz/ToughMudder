@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		501D9B7215463924007DC853 /* TMExerciseViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 501D9B7015463924007DC853 /* TMExerciseViewController~ipad.xib */; };
 		506B1A5A14C655F900CE4C76 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506B1A5914C655F900CE4C76 /* CoreData.framework */; };
 		506B1A5E14C6564000CE4C76 /* LogModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 506B1A5C14C6564000CE4C76 /* LogModel.xcdatamodeld */; };
 		93615A2A14C53839009BB6CF /* TMOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93615A2814C53839009BB6CF /* TMOneViewController.m */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		501D9B7115463924007DC853 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/TMExerciseViewController~ipad.xib"; sourceTree = "<group>"; };
 		506B1A5914C655F900CE4C76 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		506B1A5D14C6564000CE4C76 /* LogModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LogModel.xcdatamodel; sourceTree = "<group>"; };
 		93615A2714C53839009BB6CF /* TMOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMOneViewController.h; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				93F3BB5B14C52487004BFDB7 /* TMExerciseViewController.h */,
 				93F3BB5C14C52487004BFDB7 /* TMExerciseViewController.m */,
 				93F3BB6914C52487004BFDB7 /* TMExerciseViewController.xib */,
+				501D9B7015463924007DC853 /* TMExerciseViewController~ipad.xib */,
 				93F3BB5E14C52487004BFDB7 /* exercises.png */,
 				93F3BB6014C52487004BFDB7 /* exercises@2x.png */,
 				93F3BB6214C52487004BFDB7 /* TMLogViewController.h */,
@@ -170,7 +173,7 @@
 		93F3BB3C14C52487004BFDB7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = 93F3BB3F14C52487004BFDB7 /* Build configuration list for PBXProject "Tough Mudder" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -203,6 +206,7 @@
 				93F3BB7114C52488004BFDB7 /* TMLogViewController.xib in Resources */,
 				93C8A7B214C52D2F00EC285C /* exercises.txt in Resources */,
 				93615A2B14C53839009BB6CF /* TMOneViewController.xib in Resources */,
+				501D9B7215463924007DC853 /* TMExerciseViewController~ipad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +229,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		501D9B7015463924007DC853 /* TMExerciseViewController~ipad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				501D9B7115463924007DC853 /* en */,
+			);
+			name = "TMExerciseViewController~ipad.xib";
+			sourceTree = "<group>";
+		};
 		93F3BB5214C52487004BFDB7 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -258,7 +270,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Justin Cohen (EKSAS29HFU)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -273,6 +285,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C6CEA8FE-FD10-472E-AFEB-612649E00FB6";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

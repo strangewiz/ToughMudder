@@ -11,6 +11,8 @@
 
 @implementation TMExerciseViewController
 
+@synthesize table = table_;
+
 - (void)loadExercises {
   NSString *filePath = [[NSBundle mainBundle] pathForResource:@"exercises" ofType:@"txt"];  
   NSString *exercisesAsTxt = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
@@ -28,6 +30,7 @@
       self.title = NSLocalizedString(@"Exercises", @"Exercises");
       self.tabBarItem.image = [UIImage imageNamed:@"exercises"];
       [self loadExercises];
+      seconds_ = 0;
     }
     return self;
 }
@@ -104,6 +107,39 @@
   NSString* name = [self trim:[[exercises_ objectAtIndex:indexPath.row] objectAtIndex:0]];
   TMOneViewController* oneView = [[[TMOneViewController alloc] initWithContent:content withName:name] autorelease];
   [self.navigationController pushViewController:oneView animated:YES];
+}
+
+-(void) updateCountdown {
+  NSUInteger hours, minutes, seconds;
+  
+  hours = seconds_ / 3600;
+  minutes = (seconds_ % 3600) / 60;
+  seconds = (seconds_ % 3600) % 60;
+  timerLabel_.text = [NSString stringWithFormat:@"%02d:%02d:%02d", hours, minutes, seconds];
+  seconds_++;
+}
+
+- (IBAction)start {
+  if (timer_)
+    return;
+
+  [self updateCountdown];
+  timer_ = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                            target:self
+                                          selector:@selector(updateCountdown)
+                                          userInfo:nil
+                                           repeats:YES];
+}
+
+- (IBAction)stop {
+  [timer_ invalidate];
+  timer_ = nil;
+}
+
+- (IBAction)reset {
+  [self stop];
+  seconds_ = 0;
+  [self updateCountdown];
 }
 
 @end

@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TMExerciseViewController : UITableViewController {
+@interface TMExerciseViewController : UIViewController {
+  IBOutlet UITableView *table_;
   NSMutableArray* exercises_;
+  NSTimer* timer_;
+  NSUInteger seconds_;
+  IBOutlet UILabel* timerLabel_;
 }
+
+@property (nonatomic,retain) UITableView *table;
 
 @end
